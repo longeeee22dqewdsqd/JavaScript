@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --color-main: #2c3e50;
+    --color-accent: #3498db;
+    --color-dark-hover: #1f3041;
+    --color-bg: #ffffff;
+    --color-light: #f8f9fa;
+    --color-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-main);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Base Styles */
+.rounded {
+    border-radius: 12px !important; 
+}
+
+.shadow-sm { 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow { 
+    box-shadow: 0 8px 20px var(--color-shadow) !important; 
+}
+
+/* 2. Navbar */
+
+.navbar {
+    background-color: var(--color-bg) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--color-main) !important;
+}
+
+.nav-link {
+    color: var(--color-main) !important;
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s;
+    margin: 0 10px;
+    padding-bottom: 5px !important;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--color-accent) !important;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* 3. Buttons */
+
+.btn-dark {
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: var(--color-dark-hover);
+    border-color: var(--color-dark-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline-dark {
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-main);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Typography */
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: var(--color-main);
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+}
+
+/* 5. Forms */
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.15);
+}
+
+/* 6. Footer */
+
+.footer {
+    background-color: var(--color-main);
+    color: #adb5bd;
+    padding: 60px 0;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    color: #adb5bd !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--color-accent) !important;
+}
+
+/* 7. Utilities */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.text-muted {
+    color: #7a8d9f !important;
+}
+
+/* 8. Testimonial Section */
+
+.testimonial-section {
+    background-color: var(--color-light); 
+}
+
+.custom-client-img {
+    width: 100%; 
+    max-width: 280px; 
+    height: 280px;
+    object-fit: cover; 
+    border: 6px solid var(--color-accent); 
+    box-shadow: 0 8px 20px var(--color-shadow);
+}
+
+.border-left-accent {
+    padding-left: 25px;
+    border-left: 6px solid var(--color-accent); 
+}
+
+.carousel-item {
+    padding: 40px 0;
+}
+
+/* 9. Hero Section */
+
+.hero-section {
+    padding: 100px 0 120px 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    position: relative;
+}
+
+.hero-section h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 6px;
+    background-color: var(--color-accent);
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.custom-bg-hero {
+    background: radial-gradient(circle at top left, rgba(52, 152, 219, 0.15), transparent 55%), linear-gradient(120deg, #f8fbff 0%, #ffffff 55%);
+}
+
+.decorative-element {
+    margin-top: 40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 18px solid rgba(52, 152, 219, 0.12);
+    position: relative;
+}
+
+.decorative-element::after {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border-radius: 50%;
+    border: 4px dashed rgba(44, 62, 80, 0.3);
+}
+
+.hero-figure {
+    max-width: 420px;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.15));
+    transition: transform 0.4s ease;
+}
+
+.hero-figure:hover {
+    transform: translateY(-8px);
+}
+
+/* 10b. Service cards */
+.service-card {
+    background-color: #fff;
+    border: 1px solid rgba(44, 62, 80, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(52, 152, 219, 0.15);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+
+/* 10. Project Cards */
+
+.project-card {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #fff;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-project-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .custom-project-img {
+    transform: scale(1.05);
+}
+
+.project-title {
+    padding: 15px 20px 15px 20px;
+    color: var(--color-main);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* 11. Stats Numbers */
+
+.stats-numbers > div {
+    padding: 0 20px;
+    border-right: 1px solid #eee;
+}
+
+.stats-numbers > div:last-child {
+    border-right: none;
+}
+
+.stats-numbers .fs-1 {
+    font-weight: 800;
+}
+
+/* 12. Testimonial carousel */
+.testimonial-carousel-container {
+    position: relative;
+}
+
+.testimonial-prev,
+.testimonial-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(44, 62, 80, 0.15);
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+    background-color: var(--color-accent);
+}
+
+#testimonial-loader {
+    font-weight: 500;
+}
+
+.alert-message {
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+/* 13. Auth section */
+.auth-section {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.06), rgba(255, 255, 255, 0.9));
+}
+
+.auth-card {
+    border: 1px solid rgba(44, 62, 80, 0.08);
+}
+
+.auth-tabs .nav-link {
+    border-radius: 999px;
+    font-weight: 600;
+    color: var(--color-main);
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.auth-tabs .nav-link.active {
+    background-color: var(--color-main);
+    color: #fff;
+    border-color: var(--color-main);
+}
+
+.auth-tabs .nav-link:not(.active):hover {
+    border-color: rgba(44, 62, 80, 0.2);
+}
+
+.auth-alert {
+    border-radius: 12px;
+}
+
+.auth-card .form-control-lg {
+    padding: 0.9rem 1.1rem;
+}
+
+.auth-card .btn:not(.btn-dark) {
+    min-width: 58px;
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 80px 0 !important;
+    }
+
+    .auth-card {
+        padding: 1.5rem;
+    }
+}
